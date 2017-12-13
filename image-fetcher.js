@@ -13,6 +13,7 @@ function storeInChromeStorage()
   //console.log(a);
   chrome.storage.sync.set({'storedQuery': a});
   callAPI();
+
 }
 
 
@@ -53,3 +54,4 @@ function callAPI() {
 }
 
 callAPI();
+

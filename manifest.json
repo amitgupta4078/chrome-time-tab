@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "Amit Keys",
   "short_name": "Amit Keys",
@@ -12,4 +13,20 @@
     "newtab": "index.html"
   },
   "permissions": ["storage"]
+=======
+{
+  "name": "Amit Keys",
+  "short_name": "Amit Keys",
+  "version": "0.0.1.2",
+  "description": "DJ Amit quotes",
+  "icons": { "16": "icons/icon16.png",
+             "48": "icons/icon48.png",
+             "128": "icons/icon128.png"
+           },
+  "manifest_version": 2,
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": ["storage"]
+>>>>>>> 383ab4ebf1062989d54de2fc9b36fd9ba9edc26a
 }
