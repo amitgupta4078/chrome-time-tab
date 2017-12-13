@@ -15,6 +15,14 @@ body {
   text-align: center;
 }
 
+#category {
+    z-index: 100;
+    float: right;
+    width: 20%;
+    height: 30px;
+    font-size: 125%;
+}
+
 #background-image {
   background-size: cover;
 }
