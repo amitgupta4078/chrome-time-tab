@@ -21,7 +21,7 @@ function getRandomImage(minimum, maximum) {
 function reqListener () {
   let response = JSON.parse(this.responseText)
   if (!response.totalHits || (response.totalHits === 0)) {
-  	console.log('No images found')
+  	console.error('No images found')
   } else {
   	let index = getRandomImage(0, response.hits.length - 1)
   	let url = response.hits[index]['largeImageURL']
@@ -36,7 +36,10 @@ function callAPI() {
   const API_KEY = '7159995-77ef52f978ebf70313e64948f';
   let URL = "";
   chrome.storage.sync.get('storedQuery', function (result) {
-    const query = result.storedQuery;
+    let query = result.storedQuery;
+    if (!query) {
+      query = 'Adventure'
+    }
     activities.value = query
 
     URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(query)+"&image_type=photo&pretty=true&per_page=50&response_group=high_resolution";

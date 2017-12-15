@@ -27,7 +27,9 @@ window.onload = function() {
 			greetingEle.innerText = "Good Night"
 		}
 
-		hours %= 12
+		if (hours !== 12) {
+			hours %= 12
+		}
 		if (hours < 10) {
 			hours = '0' + (hours)
 		}
@@ -67,8 +69,4 @@ window.onload = function() {
 		}
 		showTime(hours, minutes, seconds);
 	}
-
-
 }
-
-
